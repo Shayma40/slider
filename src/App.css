@@ -1,0 +1,52 @@
+/* import React, { useState } from "react";
+import SwiperCore, { Navigation, Pagination } from 'swiper';
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/swiper-bundle.css";
+import PlayerCard from "./Components/PlayerCard";
+import {players} from "./Components/PlayerList";
+
+// Install Swiper modules
+SwiperCore.use([Navigation, Pagination]);
+
+const PlayerList = () => {
+    const [isLoading, setIsLoading] = useState(true);
+
+    const onSwiper = (swiper) => {
+        swiper.onProgress(() => {
+            if (swiper.progress === 1) {
+                setIsLoading(false);
+            }
+        });
+    };
+
+    return (
+        <div style={{ 
+            display: 'flex',
+            justifyContent: 'space-between', 
+            backgroundColor: 'transparent', 
+            margin: '2rem',
+            padding: '2rem',
+        }}
+        >
+            <Swiper
+                onSwiper={onSwiper}
+                slidesPerView={3}
+                spaceBetween={30}
+                navigation
+                pagination={{ clickable: true }}
+            >
+                { isLoading ? (
+                    <SwiperSlide>
+                        <p>Loading...</p>
+                    </SwiperSlide>
+                ) : players.map((player, index) => (
+                    <SwiperSlide key={index}>
+                        <PlayerCard {...player} />
+                    </SwiperSlide>
+                ))}
+            </Swiper>
+        </div>
+    );
+};
+
+export default PlayerList; */
